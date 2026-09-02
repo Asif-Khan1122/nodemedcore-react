@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap");
+
+.banner {
+  background: #f4f5f8;
+  padding: clamp(60px, 8vw, 168px) 0 clamp(50px, 6.7vw, 130px) 0;
+  display: flex;
+  align-items: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner_container {
+  width: 100%;
+  max-width: 1593px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+
+.banner__content {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: start;
+}
+
+.banner_eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px 11px 16px;
+  border-radius: 999px;
+  background: rgba(20, 163, 139, 0.1);
+  color: #098e7a;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+  line-height: 1.4;
+  border: 1px solid rgba(20, 163, 139, 0.15);
+  transition: all 0.3s ease;
+}
+
+.banner_eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #098e7a;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.banner__heading {
+  font-size: 4vw;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.08 !important;
+  font-weight: 600;
+  color: #0b3a62;
+  margin: 2px 0 7px 3px;
+  letter-spacing: -0.02em;
+}
+
+.banner__accent {
+  color: #098e7a;
+  display: inline-block;
+}
+
+.banner_desc {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(11, 58, 98, 0.72);
+  margin: 4px 0 6px;
+  font-weight: 400;
+  max-width: 48ch;
+}
+
+.banner__actions {
+  display: flex;
+  align-items: baseline;
+  gap: 36px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.btn {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.btn--primary {
+  background: #0b3a62;
+  color: #ffffff;
+  padding: 16px 34px;
+  border-radius: 3px;
+  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.18);
+  letter-spacing: 0.01em;
+}
+
+.btn--link {
+  color: #0b3a62;
+  border-bottom: 2px solid #0b3a62;
+  padding-bottom: 7px;
+  font-weight: 500;
+}
+
+.btn--link:hover {
+  color: #098e7a;
+  border-bottom-color: #098e7a;
+  gap: 12px;
+  transform: translateX(4px);
+}
+
+.banner_visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tracker-card {
+  font-family: "JetBrains Mono", monospace;
+  background: #ffffff;
+  border-radius: 17px;
+  border: 1px solid rgba(11, 58, 98, 0.08);
+  padding: 47px 48px 32px 39px;
+  width: 100%;
+  max-width: 780px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
+}
+
+.tracker-card:hover {
+  box-shadow:
+    0 24px 72px rgba(11, 37, 69, 0.12),
+    0 4px 20px rgba(11, 37, 69, 0.06);
+  transform: translateY(-2px);
+}
+
+.tracker-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tracker-card__title {
+  letter-spacing: 0.04em;
+  font-size: clamp(10px, 3vw, 15px);
+  color: #0b3a62;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.8;
+  line-height: 1.334;
+}
+
+.tracker-card__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: clamp(12px, 3vw, 15px);
+  font-weight: 400;
+  font-family: "IBM Plex Sans";
+  color: #098e7a;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.3338;
+}
+
+.tracker-card__live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #098e7a;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: scale(0.6);
+  }
+}
+
+.tracker-card__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.tracker-row {
+  position: relative;
+}
+
+.tracker-row__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.75;
+  color: #0b3a62;
+  line-height: 1.273;
+}
+
+.tracker-row__track {
+  position: relative;
+  height: 10px;
+}
+
+.tracker-row__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #0b3a623b;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+.tracker-row__ring {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 1.4px solid #0b3a62;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.tracker-row__ring:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  border-color: #098e7a;
+  cursor: pointer;
+}
+
+.tracker-row__node {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 2;
+  cursor: pointer;
+}
+.tracker-row__node:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    0 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.tracker-row__node--paid {
+  background: #098e7a;
+}
+
+.tracker-row__node--review {
+  background: #e0bb74;
+}
+
+.tracker-row__node--denied {
+  background: #d58137;
+}
+
+.tracker-card__legend {
+  display: flex;
+  gap: 22px;
+  font-size: 11px;
+  color: #0b3a62;
+  font-weight: 400;
+  font-family: "IBM Plex Sans";
+}
+
+.tracker-card__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tracker-card__legend span:hover {
+  color: #0b2545;
+  transform: translateX(2px);
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.legend-dot--paid {
+  background: #098e7a;
+}
+
+.legend-dot--review {
+  background: #c9a13a;
+}
+
+.legend-dot--denied {
+  background: #d97b3f;
+}
+
+@media (max-width: 1200px) {
+  .banner__heading {
+    font-size: clamp(40px, 4.5vw, 60px);
+  }
+
+  .banner_desc {
+    font-size: 17px;
+  }
+
+  .tracker-card {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner_inner {
+    gap: 32px;
+  }
+
+  .banner_visual {
+    width: 45%;
+    min-width: 300px;
+  }
+
+  .tracker-card {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    padding: 60px 0 50px 0;
+  }
+
+  .banner_inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  /* .banner__content {
+    width: 100%;
+    max-width: 100%;
+  } */
+
+  .banner_desc {
+    max-width: 100%;
+  }
+
+  /* .banner__actions {
+    justify-content: center;
+  } */
+
+  .banner_visual {
+    width: 100%;
+    max-width: 560px;
+    justify-content: center;
+    min-width: unset;
+  }
+
+  .banner::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 40px 0 30px 0;
+  }
+
+  .banner_container {
+    padding: 0 16px;
+  }
+
+  .banner__heading {
+    font-size: 32px;
+  }
+
+  .banner_desc {
+    font-size: 15px;
+  }
+
+  .banner_eyebrow {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  .banner__actions {
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn--primary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  .btn--link {
+    font-size: 14px;
+  }
+
+  .banner_visual {
+    padding: 0;
+  }
+
+  .tracker-card {
+    padding: 20px 18px 18px;
+    border-radius: 16px;
+  }
+
+  .tracker-card__rows {
+    gap: 24px;
+  }
+  .tracker-card__title {
+    letter-spacing: 0;
+  }
+  .tracker-card__live {
+    gap: 4px;
+    letter-spacing: 0;
+  }
+  .tracker-card__legend {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+  }
+}
