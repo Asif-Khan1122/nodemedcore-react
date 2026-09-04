@@ -1,0 +1,286 @@
+.whyus {
+  background-color: #0b3a62;
+  padding: 109px 0 141px;
+}
+
+.whyus .container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.whyus .whyus_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.whyus .whyus_header {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  text-align: left;
+  margin-bottom: 18px;
+  max-width: 830px;
+}
+
+.whyus .whyus_tag {
+  color: #0ddabb;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  line-height: 1.5;
+  width: fit-content;
+}
+
+.whyus .whyus_title {
+  color: #ffffff;
+  font-size: clamp(38px, 4vw, 50px);
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.whyus .whyus_description {
+  color: #b1dbff;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 740px;
+}
+
+.whyus .whyus_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.whyus .whyus_list {
+  display: flex;
+  flex-direction: column;
+  max-width: 696px;
+  height: 100%;
+}
+
+.whyus .whyus_item {
+  display: flex;
+  gap: 60px;
+  padding: 43.6px 0;
+  border-bottom: 0.8px solid #d9d9d95e;
+}
+
+.whyus .whyus_item:first-child {
+  border-top: 0.8px solid #d9d9d95e;
+}
+
+.whyus .whyus_arrow {
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.whyus .whyus_item_title {
+  color: #ffffff;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 600;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.116;
+  margin-bottom: 11px;
+}
+
+.whyus .whyus_item_description {
+  color: #b1dbff;
+  font-size: clamp(14px, 3vw, 18px);
+  line-height: 1.5;
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 619px;
+}
+
+.whyus .whyus_card {
+  border: 0.8px solid #d9d9d95e;
+  border-radius: 17px;
+  padding: 259px 112px 219px 49px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  text-align: left;
+}
+
+.whyus .whyus_card_label {
+  color: #b1dbff;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  line-height: 1.334;
+}
+
+.whyus .whyus_badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.whyus .whyus_badge {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  border: 1px solid rgba(177, 219, 255, 0.3);
+  border-radius: 7px;
+  padding: 12px 18px;
+  text-align: center;
+  line-height: 1.21;
+  width: 100%;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.whyus .whyus_badge:nth-child(1) {
+  max-width: 289px;
+}
+
+.whyus .whyus_badge:nth-child(2),
+.whyus .whyus_badge:nth-child(3) {
+  max-width: 306px;
+}
+
+.whyus .whyus_badge:nth-child(4) {
+  max-width: 208px;
+}
+
+.whyus .whyus_card_caption {
+  color: #b1dbff;
+  font-size: 18px;
+  line-height: 1.519;
+  font-weight: 300;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-top: auto;
+}
+
+.whyus_item_text {
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .whyus .whyus_content {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 44px;
+  }
+
+  .whyus .whyus_list {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .whyus .whyus_item {
+    gap: 30px;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .whyus .whyus_content {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 44px;
+  }
+
+  .whyus .whyus_list {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .whyus .whyus_item {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .whyus .whyus_item_description {
+    max-width: 100%;
+  }
+
+  .whyus .whyus_card {
+    padding: 200px 90px 185px 40px;
+    height: auto;
+  }
+
+  .whyus .whyus_badges {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .whyus .whyus_badge {
+    max-width: 100% !important;
+    font-size: 14px;
+    padding: 10px 15px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .whyus {
+    padding: 62px 0 90px;
+  }
+
+  .whyus .whyus_card {
+    padding: 180px 60px 140px 30px;
+  }
+
+  .whyus .whyus_title {
+    font-size: 28px;
+  }
+
+  .whyus .whyus_description {
+    font-size: 16px;
+  }
+
+  .whyus .whyus_item {
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 0;
+  }
+
+  .whyus .whyus_arrow {
+    margin-top: 0;
+  }
+
+  .whyus .whyus_item_title {
+    font-size: 20px;
+  }
+
+  .whyus .whyus_badges {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .whyus .whyus_badge {
+    font-size: 13px;
+    padding: 10px 14px;
+    max-width: 100% !important;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .whyus .whyus_card_label {
+    font-size: 13px;
+  }
+
+  .whyus .whyus_card_caption {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .whyus .whyus_card {
+    padding: 128px 34px 110px 20px;
+  }
+
+  .whyus .whyus_badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

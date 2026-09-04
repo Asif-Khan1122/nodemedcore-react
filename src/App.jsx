@@ -4,6 +4,9 @@ import Banner from "./components/Banner/Banner";
 import StatsSection from "./components/StatsSection/StatsSection";
 import Services from "./components/Services/Services";
 import HowItWorksSection from "./components/Howitworks/HowItWorksSection";
+import Whyus from "./components/Whyus/Whyus";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <StatsSection />
       <Services />
       <HowItWorksSection />
+      <Whyus />
+      <Contact />
+      <Footer />
     </>
   );
 }

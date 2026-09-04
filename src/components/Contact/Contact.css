@@ -1,0 +1,57 @@
+.contact {
+  background-color: #f5f7f9;
+  padding: 149px 0 135px;
+}
+
+.contact .container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact .contact_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.contact .contact_tag {
+  color: #098e7a;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact .contact_title {
+  color: #0b3a62;
+  font-size: clamp(38px, 4vw, 50px);
+  font-weight: 600;
+  line-height: 1.1;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.contact .contact_description {
+  color: #0b3a62cf;
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-family: "IBM Plex Sans", sans-serif;
+  max-width: 731px;
+  margin: 13px auto 13px;
+}
+
+.contact a.contact_btn {
+  background-color: #0b3a62;
+  padding: 18px 41px 17px 41px;
+  border-radius: 3px;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-decoration: none;
+  line-height: 1.1;
+  margin: auto;
+}
