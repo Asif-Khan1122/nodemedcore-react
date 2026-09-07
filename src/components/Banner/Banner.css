@@ -122,19 +122,6 @@
 
 .banner a.banner_btn,
 .banner_btn {
-  /* display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 41px 17px 41px;
-  border-radius: 3px;
-  width: fit-content;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: "IBM Plex Sans", sans-serif;
-  text-decoration: none;
-  line-height: 1.1;
-  cursor: pointer;
-  border: none; */
   color: #ffffff;
   background-image: linear-gradient(
     to right,
@@ -401,7 +388,7 @@ svg.arrow_icon {
 
 @media (max-width: 1024px) {
   .banner_inner {
-    gap: 32px;
+    gap: 30px;
   }
 
   .banner_visual {
@@ -424,11 +411,6 @@ svg.arrow_icon {
     align-items: center;
     gap: 48px;
   }
-
-  /* .banner__content {
-    width: 100%;
-    max-width: 100%;
-  } */
 
   .banner_desc {
     max-width: 100%;
