@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import "./banner.css";
 import { FaArrowRight } from "react-icons/fa";
+import "./Banner.css";
 
 const initialRows = [
   { id: 1, mid: "Scrub", end: "Payer", status: "paid", progress: 0 },
