@@ -75,7 +75,6 @@ const Whyus = () => {
             <div className='whyus_card'>
               <p className='whyus_card_label'>compliance & handling</p>
 
-              {/* Badges Container - all badges in one parent */}
               <div className='whyus_badges'>
                 {badges.map((badge, index) => (
                   <span className='whyus_badge' key={index}>

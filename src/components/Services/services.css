@@ -28,7 +28,7 @@
   color: #098e7a;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: clamp(14px, 3vw, 16px);
   line-height: 1.5;
   width: fit-content;
 }
@@ -43,7 +43,7 @@
 
 .services .services_description {
   color: #6b7c85;
-  font-size: 20px;
+  font-size: clamp(15px, 3vw, 20px);
   line-height: 1.55;
   font-weight: 400;
   font-family: "IBM Plex Sans", sans-serif;
@@ -99,7 +99,7 @@
 }
 .services .card_number {
   color: #098e7a;
-  font-size: 14px;
+  font-size: clamp(10px, 2vw, 14px);
   font-weight: 400;
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
@@ -107,7 +107,7 @@
 
 .services .card_title {
   color: #0b3a62;
-  font-size: 26px;
+  font-size: clamp(20px, 3vw, 26px);
   font-weight: 600;
   margin-bottom: 6px;
   line-height: 1.1156;
@@ -116,7 +116,7 @@
 
 .services .card_description {
   color: #6b7c85;
-  font-size: 20px;
+  font-size: clamp(16px, 3vw, 20px);
   line-height: 1.5;
   margin: 0;
 }
@@ -141,12 +141,22 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 75px 0 38px;
+    padding: 50px 0;
   }
   .services .services_inner {
     gap: 30px;
   }
+  .services .services_header {
+    margin-bottom: 0px;
+    gap: 18px;
+  }
+  .services .services_card {
+    border-radius: 7px;
+    padding: 30px 28px 31px 25px;
+    gap: 16px;
+  }
   .services .services_grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

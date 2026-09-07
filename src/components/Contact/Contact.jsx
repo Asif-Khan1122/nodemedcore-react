@@ -12,7 +12,7 @@ const Contact = () => {
             claims are stalling and what fixing would take - no cost, no
             commitment.
           </p>
-          <a href='#' className='contact_btn'>
+          <a href='#' className='btn btn--primary contact_button'>
             Book free billing audit
           </a>
         </div>

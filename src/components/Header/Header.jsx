@@ -5,23 +5,19 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef(null);
 
-  // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (headerRef.current && !headerRef.current.contains(event.target)) {
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "unset";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
+    if (menuOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
   }, [menuOpen]);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -48,7 +44,7 @@ const Header = () => {
             {menuOpen ? "✕" : "☰"}
           </button>
 
-          <a href='#home' className='logo'>
+          <a href='#banner' className='logo'>
             <img src='/logo.png' alt='Company logo' />
           </a>
 

@@ -120,6 +120,44 @@
   letter-spacing: 0.01em;
 }
 
+.banner a.banner_btn,
+.banner_btn {
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 41px 17px 41px;
+  border-radius: 3px;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-decoration: none;
+  line-height: 1.1;
+  cursor: pointer;
+  border: none; */
+  color: #ffffff;
+  background-image: linear-gradient(
+    to right,
+    #098e7a 0%,
+    #098e7a 50%,
+    #0b3a62 50%,
+    #0b3a62 100%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition:
+    background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.banner a.banner_btn:hover,
+.banner_btn:hover {
+  background-position: left bottom;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 .btn--link {
   color: #0b3a62;
   border-bottom: 2px solid #0b3a62;
@@ -157,11 +195,13 @@
 
 .tracker-card:hover {
   box-shadow:
-    0 24px 72px rgba(11, 37, 69, 0.12),
-    0 4px 20px rgba(11, 37, 69, 0.06);
-  transform: translateY(-2px);
+    0 24px 72px rgba(11, 30, 60, 0.12),
+    0 4px 20px rgba(11, 30, 60, 0.06);
 }
-
+svg.arrow_icon {
+  width: 8px;
+  height: auto;
+}
 .tracker-card__header {
   display: flex;
   align-items: center;
@@ -394,13 +434,8 @@
     max-width: 100%;
   }
 
-  /* .banner__actions {
-    justify-content: center;
-  } */
-
   .banner_visual {
     width: 100%;
-    max-width: 560px;
     justify-content: center;
     min-width: unset;
   }

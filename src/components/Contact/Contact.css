@@ -20,7 +20,7 @@
   color: #098e7a;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   line-height: 1.5;
 }
 
@@ -34,7 +34,7 @@
 
 .contact .contact_description {
   color: #0b3a62cf;
-  font-size: 20px;
+  font-size: clamp(15px, 2vw, 20px);
   line-height: 1.55;
   font-weight: 400;
   font-family: "IBM Plex Sans", sans-serif;
@@ -42,16 +42,47 @@
   margin: 13px auto 13px;
 }
 
-.contact a.contact_btn {
-  background-color: #0b3a62;
+.contact a.contact_button,
+.contact_button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 18px 41px 17px 41px;
   border-radius: 3px;
   width: fit-content;
   font-size: 17px;
   font-weight: 600;
-  color: #ffffff;
   font-family: "IBM Plex Sans", sans-serif;
   text-decoration: none;
   line-height: 1.1;
   margin: auto;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #098e7a 50%, #0b3a62 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition:
+    background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact a.contact_button:hover,
+.contact_button:hover {
+  background-position: left bottom;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0 60px;
+  }
+  .contact .contact_inner {
+    gap: 10px;
+  }
+
+  .contact .contact_description {
+    margin: 9px auto 9px;
+  }
 }

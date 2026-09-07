@@ -22,24 +22,24 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <div className='container'>
-        <div className='footer-grid'>
-          <div className='footer-brand'>
-            <div className='footer-logo-wrap'>
+        <div className='footer_grid'>
+          <div className='footer_brand'>
+            <div className='footer_logo_wrap'>
               <img src='./logo.png' alt='Nodemedcore Logo' />
             </div>
-            <p className='footer-description'>
+            <p className='footer_description'>
               Medical billing and revenue cycle management for independent
               practices.
             </p>
           </div>
 
-          <div className='footer-links-grid'>
-            <div className='footer-column'>
-              <h3 className='footer-heading'>Services</h3>
-              <ul className='footer-list'>
+          <div className='footer_links_grid'>
+            <div className='footer_column'>
+              <h3 className='footer_heading'>Services</h3>
+              <ul className='footer_list'>
                 {footerData.services.map((item, index) => (
                   <li key={index}>
-                    <a href={item.href} className='footer-link'>
+                    <a href={item.href} className='footer_link'>
                       {item.label}
                     </a>
                   </li>
@@ -47,13 +47,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Company Column */}
-            <div className='footer-column'>
-              <h3 className='footer-heading'>Company</h3>
-              <ul className='footer-list'>
+            <div className='footer_column'>
+              <h3 className='footer_heading'>Company</h3>
+              <ul className='footer_list'>
                 {footerData.company.map((item, index) => (
                   <li key={index}>
-                    <a href={item.href} className='footer-link'>
+                    <a href={item.href} className='footer_link'>
                       {item.label}
                     </a>
                   </li>
@@ -61,13 +60,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact Column */}
-            <div className='footer-column'>
-              <h3 className='footer-heading'>Contact</h3>
-              <ul className='footer-list'>
+            <div className='footer_column'>
+              <h3 className='footer_heading'>Contact</h3>
+              <ul className='footer_list'>
                 {footerData.contact.map((item, index) => (
                   <li key={index}>
-                    <a href={item.href} className='footer-link'>
+                    <a href={item.href} className='footer_link'>
                       {item.label}
                     </a>
                   </li>
@@ -77,8 +75,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className='footer-bottom'>
+        <div className='footer_bottom'>
           <p>© 2026 Nodemedcore. All rights reserved.</p>
           <p>HIPAA-aligned handling on every claim.</p>
         </div>

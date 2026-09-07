@@ -63,7 +63,7 @@
 }
 @media (max-width: 768px) {
   .stats_section {
-    padding: 36px 0 28px;
+    padding: 40px 0 30px;
   }
 
   .stats_section .stat_item {

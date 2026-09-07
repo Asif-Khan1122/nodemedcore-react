@@ -53,20 +53,32 @@
   padding: 16px 27px 15px;
   text-decoration: none;
   border-radius: 3px;
-  background: #0b3a62;
   color: white;
   cursor: pointer;
   font:
     600 17px "IBM Plex Sans",
     sans-serif;
   line-height: 1.295;
-  transition: background 0.3s ease;
+  background-image: linear-gradient(
+    to right,
+    #098e7a 0%,
+    #098e7a 50%,
+    #0b3a62 50%,
+    #0b3a62 100%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition:
+    background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 .header .btn_consult:hover {
-  background: #0a2e4f;
+  background-position: left bottom;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
-
 .header .menu-toggle {
   display: none;
   border: none;
@@ -103,7 +115,7 @@
 }
 @media (max-width: 1100px) {
   .header {
-    padding: 25px 0 20px;
+    padding: 20px 0 16px;
   }
 
   .header .nav {
@@ -221,5 +233,11 @@
 
   .header .mobile-nav.active ul {
     width: 100%;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    padding: 15px 0;
   }
 }
