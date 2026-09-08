@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import "./Banner.css";
+import { Helmet } from "react-helmet-async";
 
 const initialRows = [
   { id: 1, mid: "Scrub", end: "Payer", status: "paid", progress: 0 },
@@ -130,44 +131,60 @@ const ClaimTrackerCard = () => {
 
 const Banner = () => {
   return (
-    <section className='banner' id='banner'>
-      <div className='banner_container'>
-        <div className='banner_inner'>
-          <div className='banner__content'>
-            <span className='banner_eyebrow'>
-              <i className='banner_eyebrow-dot' />
-              Medical billing &amp; revenue cycle management
-            </span>
+    <>
+      <Helmet>
+        <title>NodeMedCore | Healthcare Solutions</title>
+        <meta
+          name='description'
+          content='NodeMedCore provides cutting-edge solutions for medical technologies...'
+        />
+        <meta property='og:title' content='NodeMedCore' />
+        <meta
+          property='og:description'
+          content='Healthcare and technology solutions.'
+        />
+        <meta property='og:type' content='website' />
+      </Helmet>
 
-            <h1 className='banner__heading'>
-              Every claim follows a <br /> path.
-              <br />
-              We keep it moving to <br />
-              <span className='banner__accent'>paid</span>.
-            </h1>
+      <section className='banner' id='banner'>
+        <div className='banner_container'>
+          <div className='banner_inner'>
+            <div className='banner__content'>
+              <span className='banner_eyebrow'>
+                <i className='banner_eyebrow-dot' />
+                Medical billing &amp; revenue cycle management
+              </span>
 
-            <p className='banner_desc'>
-              Nodemedcore handles coding, submission, and denial management for
-              independent practices — so claims go out clean, payers respond
-              faster, and nothing sits stuck in a queue.
-            </p>
+              <h1 className='banner__heading'>
+                Every claim follows a <br /> path.
+                <br />
+                We keep it moving to <br />
+                <span className='banner__accent'>paid</span>.
+              </h1>
 
-            <div className='banner__actions'>
-              <a href='#consult' className='btn btn--primary banner_btn'>
-                Book free billing audit
-              </a>
-              <a href='#howitworks' className='btn btn--link'>
-                See how a claim moves <FaArrowRight className='arrow_icon' />
-              </a>
+              <p className='banner_desc'>
+                Nodemedcore handles coding, submission, and denial management
+                for independent practices — so claims go out clean, payers
+                respond faster, and nothing sits stuck in a queue.
+              </p>
+
+              <div className='banner__actions'>
+                <a href='#consult' className='btn btn--primary banner_btn'>
+                  Book free billing audit
+                </a>
+                <a href='#howitworks' className='btn btn--link'>
+                  See how a claim moves <FaArrowRight className='arrow_icon' />
+                </a>
+              </div>
+            </div>
+
+            <div className='banner_visual'>
+              <ClaimTrackerCard />
             </div>
           </div>
-
-          <div className='banner_visual'>
-            <ClaimTrackerCard />
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
