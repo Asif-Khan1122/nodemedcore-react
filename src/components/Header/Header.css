@@ -160,11 +160,11 @@
 
   .header .mobile-nav.active {
     display: flex;
-    position: absolute;
-    top: 81px;
+    position: fixed;
+    top: var(--header-height, 81px);
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--header-height, 81px));
     z-index: 99;
     background: #f5f7f9;
     padding: 30px 20px;

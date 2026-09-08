@@ -435,18 +435,28 @@ svg.arrow_icon {
   .banner_container {
     padding: 0 16px;
   }
+  .banner_inner {
+    gap: 28px;
+  }
 
   .banner__heading {
     font-size: 32px;
   }
-
+  .banner__heading br {
+    display: none;
+  }
   .banner_desc {
     font-size: 15px;
   }
+  .banner__content {
+    gap: 18px;
+  }
 
   .banner_eyebrow {
-    font-size: 11px;
-    padding: 8px 14px;
+    font-size: 10px;
+    padding: 7px 10px;
+    gap: 7px;
+    letter-spacing: 0;
   }
 
   .banner__actions {
@@ -463,6 +473,7 @@ svg.arrow_icon {
   }
 
   .btn--link {
+    margin: auto;
     font-size: 14px;
   }
 

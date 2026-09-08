@@ -38,7 +38,7 @@
 
 .stats_section .stat_item h3 {
   color: #fff;
-  font-size: clamp(36px, 3vw, 50px);
+  font-size: clamp(30px, 3vw, 50px);
   font-weight: 600;
   line-height: 1;
   font-family: "IBM Plex Sans", sans-serif;
@@ -65,7 +65,9 @@
   .stats_section {
     padding: 40px 0 30px;
   }
-
+  .stats_section .stat_item:first-child {
+    max-width: 100%;
+  }
   .stats_section .stat_item {
     max-width: 100%;
   }
