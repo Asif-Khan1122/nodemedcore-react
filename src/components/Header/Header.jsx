@@ -32,16 +32,18 @@ const Header = () => {
         <div className='header_inner'>
           <button
             type='button'
-            className='menu-toggle'
+            className={`menu-toggle ${menuOpen ? "open" : ""}`}
             onClick={toggleMenu}
             aria-label='Toggle navigation menu'
             aria-expanded={menuOpen}
           >
-            {menuOpen ? "✕" : "☰"}
+            <span className='bar'></span>
+            <span className='bar'></span>
+            <span className='bar'></span>
           </button>
 
           <a href='#banner' className='logo'>
-            <img src='/logo.png' alt='NodeMedCore Logo' />
+            <img src='/logo.svg' alt='NodeMedCore Logo' />
           </a>
 
           <div className='header_right'>
