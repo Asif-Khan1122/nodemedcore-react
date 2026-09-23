@@ -1,26 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const headerRef = useRef(null);
 
   useEffect(() => {
     if (menuOpen) {
-      const scrollY = window.scrollY;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
+      document.body.classList.add("menu-open");
     } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      document.body.classList.remove("menu-open");
     }
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
   }, [menuOpen]);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   const navLinks = [
@@ -31,21 +27,21 @@ const Header = () => {
   ];
 
   return (
-    <header className='header' ref={headerRef}>
+    <header className='header'>
       <div className='container'>
         <div className='header_inner'>
           <button
             type='button'
             className='menu-toggle'
             onClick={toggleMenu}
-            aria-label='Toggle menu'
+            aria-label='Toggle navigation menu'
             aria-expanded={menuOpen}
           >
             {menuOpen ? "✕" : "☰"}
           </button>
 
           <a href='#banner' className='logo'>
-            <img src='/logo.png' alt='Company logo' />
+            <img src='/logo.png' alt='NodeMedCore Logo' />
           </a>
 
           <div className='header_right'>
@@ -57,11 +53,13 @@ const Header = () => {
               ))}
             </nav>
           </div>
-          <a href='#consult' className='btn_consult'>
+
+          <a href='#contact' className='btn_consult'>
             Book a Consult
           </a>
         </div>
-        {/* mobile nav */}
+
+        {/* Mobile Navigation */}
         <nav
           className={`mobile-nav ${menuOpen ? "active" : ""}`}
           aria-label='Mobile navigation'
@@ -76,7 +74,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <a href='#consult' className='mobile-consult' onClick={closeMenu}>
+          <a href='#contact' className='mobile-consult' onClick={closeMenu}>
             Book a Consult
           </a>
         </nav>

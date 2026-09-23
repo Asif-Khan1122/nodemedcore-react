@@ -8,11 +8,11 @@ const stats = [
     note: "These are the operating targets Nodemedcare is built around, not a track record — ask us how we get there for your specialty.",
   },
   {
-    value: "24 hrs",
+    value: "24  hrs",
     description: "Standard turnaround from encounter to claim submission",
   },
   {
-    value: "5 days",
+    value: "5  days",
     description:
       "Target turnaround to file an appeal after a denial is received",
   },

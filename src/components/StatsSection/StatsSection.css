@@ -42,6 +42,7 @@
   font-weight: 600;
   line-height: 1;
   font-family: "IBM Plex Sans", sans-serif;
+  white-space: pre-wrap;
 }
 
 .stats_section .stat_item p,
