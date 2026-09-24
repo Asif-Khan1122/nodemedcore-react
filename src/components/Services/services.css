@@ -27,11 +27,11 @@
 .services .services_tag {
   color: #098e7a;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 4%;
   font-size: clamp(14px, 3vw, 16px);
   line-height: 1.5;
   width: fit-content;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
 }
 
 .services .services_title {

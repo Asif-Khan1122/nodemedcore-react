@@ -19,14 +19,15 @@
 .contact .contact_tag {
   color: #098e7a;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 4%;
   font-size: clamp(14px, 2vw, 16px);
   line-height: 1.5;
+  font-family: "IBM Plex Mono", sans-serif;
 }
 
 .contact .contact_title {
   color: #0b3a62;
-  font-size: clamp(38px, 4vw, 50px);
+  font-size: clamp(32px, 4vw, 50px);
   font-weight: 600;
   line-height: 1.1;
   font-family: "Space Grotesk", sans-serif;
@@ -77,7 +78,7 @@
 
 @media (max-width: 900px) {
   .contact {
-    padding: 50px 0 65px;
+    padding: 50px 0;
   }
 }
 @media (max-width: 768px) {

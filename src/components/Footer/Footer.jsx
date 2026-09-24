@@ -8,13 +8,13 @@ const footerData = {
     { label: "Credentialing", href: "#" },
   ],
   company: [
-    { label: "Why Nodemedcore", href: "#" },
-    { label: "How it works", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Why Nodemedcore", href: "#whyus" },
+    { label: "How it works", href: "#howitworks" },
+    { label: "Contact", href: "#contact" },
   ],
   contact: [
     { label: "hello@nodemedcore.com", href: "mailto:hello@nodemedcore.com" },
-    { label: "Book a consult call", href: "#" },
+    { label: "Book a consult call", href: "#contact" },
   ],
 };
 

@@ -417,7 +417,7 @@ svg.arrow_icon {
   background: #d97b3f;
 }
 
-@media (max-width: 1265px) {
+@media (max-width: 1300px) {
   .banner {
     padding: 100px 0 100px 0;
   }
@@ -510,8 +510,8 @@ svg.arrow_icon {
   }
 
   .banner_eyebrow {
-    font-size: 10px;
-    padding: 7px 9px;
+    font-size: 8px;
+    padding: 6px 9px;
     gap: 7px;
     letter-spacing: 0;
   }
