@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 40px;
+  gap: 38px;
 }
 
 .banner__content {
@@ -51,7 +51,7 @@
   text-transform: uppercase;
   width: fit-content;
   line-height: 1.5;
-  border: 1px solid rgb(9 142 122);
+  border: 0.5px solid #098e7a;
 }
 
 .banner_eyebrow-dot {
@@ -100,6 +100,9 @@
   letter-spacing: -0.02em;
 }
 
+#dot {
+  color: #000;
+}
 .banner__accent {
   color: #098e7a;
   display: inline-block;
@@ -234,7 +237,7 @@ svg.arrow_icon {
 }
 
 .tracker-card__title {
-  letter-spacing: 0.04em;
+  letter-spacing: 3%;
   font-size: clamp(10px, 3vw, 15px);
   color: #0b3a62;
   font-weight: 400;
@@ -436,9 +439,15 @@ svg.arrow_icon {
   }
 }
 
+@media (max-width: 1046px) {
+  .banner__actions {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .banner_inner {
-    gap: 30px;
+    gap: 15px;
   }
 
   .banner__heading {
@@ -478,12 +487,6 @@ svg.arrow_icon {
 
   .banner::before {
     display: none;
-  }
-}
-
-@media (max-width: 1046px) {
-  .banner__actions {
-    gap: 20px;
   }
 }
 

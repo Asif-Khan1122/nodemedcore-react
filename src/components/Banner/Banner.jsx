@@ -199,7 +199,8 @@ const Banner = () => {
                 Every claim follows a <br /> path.
                 <br />
                 We keep it moving to <br />
-                <span className='banner__accent'>paid</span>.
+                <span className='banner__accent'>paid</span>
+                <span id='dot'>.</span>
               </h1>
 
               <p className='banner_desc'>
