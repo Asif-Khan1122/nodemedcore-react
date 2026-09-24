@@ -23,6 +23,7 @@
   font-size: clamp(14px, 2vw, 16px);
   line-height: 1.5;
   font-family: "IBM Plex Mono", sans-serif;
+  text-transform: uppercase;
 }
 
 .contact .contact_title {
