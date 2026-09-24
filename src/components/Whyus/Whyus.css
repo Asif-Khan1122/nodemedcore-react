@@ -201,7 +201,11 @@
     white-space: normal;
   }
 }
-
+@media (max-width: 900px) {
+  .whyus {
+    padding: 50px 0 50px;
+  }
+}
 @media (max-width: 600px) {
   .whyus {
     padding: 50px 0 90px;

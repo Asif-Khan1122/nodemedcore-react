@@ -1,72 +1,86 @@
 import { useState, useEffect, useRef } from "react";
-import { FaArrowRight } from "react-icons/fa";
 import "./Banner.css";
 import { Helmet } from "react-helmet-async";
 
 const initialRows = [
-  { id: 1, mid: "Scrub", end: "Payer", status: "paid", progress: 0 },
-  { id: 2, mid: "Submit", end: "Remit", status: "review", progress: 0 },
-  { id: 3, mid: "Appeal", end: "Payer", status: "denied", progress: 0 },
+  {
+    id: 1,
+    mid: "Scrub",
+    end: "Payer",
+    status: "paid",
+    speed: 0.02,
+    progress: 0,
+  },
+  {
+    id: 2,
+    mid: "Submit",
+    end: "Remit",
+    status: "review",
+    speed: 0.015,
+    progress: 35,
+  },
+  {
+    id: 3,
+    mid: "Appeal",
+    end: "Payer",
+    status: "denied",
+    speed: 0.01,
+    progress: 70,
+  },
 ];
-
-const ArrowIcon = () => <FaArrowRight className='arrow_icon' />;
 
 const STATUS_LABEL = {
   paid: "Paid",
   review: "In review",
   denied: (
     <>
-      Denied <ArrowIcon /> appeal
+      Denied{" "}
+      <span>
+        <svg
+          width='9'
+          height='8'
+          viewBox='0 0 9 8'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M8.35355 4.03556C8.54882 3.8403 8.54882 3.52372 8.35355 3.32845L5.17157 0.146473C4.97631 -0.0487893 4.65973 -0.0487893 4.46447 0.146473C4.2692 0.341735 4.2692 0.658318 4.46447 0.85358L7.29289 3.68201L4.46447 6.51043C4.2692 6.7057 4.2692 7.02228 4.46447 7.21754C4.65973 7.4128 4.97631 7.4128 5.17157 7.21754L8.35355 4.03556ZM0 3.68201V4.18201H8V3.68201V3.18201H0V3.68201Z'
+            fill='#0B3A62'
+          />
+        </svg>
+      </span>{" "}
+      appeal
     </>
   ),
-};
-
-const SPEEDS = {
-  1: 0.03,
-  2: 0.025,
-  3: 0.02,
 };
 
 const ClaimTrackerCard = () => {
   const [rows, setRows] = useState(initialRows);
   const lastTimeRef = useRef(null);
-  const frameIdRef = useRef(null);
 
   useEffect(() => {
+    let animationFrameId;
+
     const tick = (now) => {
-      if (lastTimeRef.current === null) {
-        lastTimeRef.current = now;
-      }
+      if (lastTimeRef.current !== null) {
+        const delta = Math.min(now - lastTimeRef.current, 64); // Frame cap to prevent jump after tab switch
 
-      const delta = now - lastTimeRef.current;
+        setRows((prev) =>
+          prev.map((row) => {
+            let nextProgress = row.progress + row.speed * delta;
+            if (nextProgress >= 100) {
+              nextProgress = 0;
+            }
+            return { ...row, progress: nextProgress };
+          }),
+        );
+      }
       lastTimeRef.current = now;
-
-      setRows((prev) =>
-        prev.map((row) => {
-          const speed = SPEEDS[row.id];
-          let next = row.progress + speed * delta;
-
-          if (next >= 100) {
-            next = next % 100;
-          }
-
-          return {
-            ...row,
-            progress: next,
-          };
-        }),
-      );
-
-      frameIdRef.current = requestAnimationFrame(tick);
+      animationFrameId = requestAnimationFrame(tick);
     };
 
-    frameIdRef.current = requestAnimationFrame(tick);
-
-    return () => {
-      if (frameIdRef.current) {
-        cancelAnimationFrame(frameIdRef.current);
-      }
-    };
+    animationFrameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
@@ -75,7 +89,7 @@ const ClaimTrackerCard = () => {
         <span className='tracker-card__title'>Claim tracker - Live view</span>
 
         <span className='tracker-card__live'>
-          <span className='tracker-card__live-dot' />
+          <i className='banner_eyebrow-dot' />
           Streaming
         </span>
       </div>
@@ -133,17 +147,43 @@ const Banner = () => {
   return (
     <>
       <Helmet>
-        <title>NodeMedCore | Healthcare Solutions</title>
+        <title>NodeMedCore | Medical Billing & Revenue Cycle Management</title>
+
         <meta
           name='description'
-          content='NodeMedCore provides cutting-edge solutions for medical technologies...'
+          content='NodeMedCore handles coding, submission, and denial management for independent practices — so claims go out clean, payers respond faster, and nothing sits stuck in a queue.'
         />
-        <meta property='og:title' content='NodeMedCore' />
+
+        <meta
+          property='og:title'
+          content='NodeMedCore | Medical Billing & Revenue Cycle Management'
+        />
+
         <meta
           property='og:description'
-          content='Healthcare and technology solutions.'
+          content='NodeMedCore handles coding, submission, and denial management for independent practices.'
         />
+
         <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://nodemedcore.com/' />
+        <meta
+          property='og:image'
+          content='https://nodemedcore.com/og-image.png'
+        />
+
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          name='twitter:title'
+          content='NodeMedCore | Medical Billing & Revenue Cycle Management'
+        />
+        <meta
+          name='twitter:description'
+          content='NodeMedCore handles coding, submission, and denial management for independent practices.'
+        />
+        <meta
+          name='twitter:image'
+          content='https://nodemedcore.com/og-image.png'
+        />
       </Helmet>
 
       <section className='banner' id='banner'>
@@ -152,7 +192,7 @@ const Banner = () => {
             <div className='banner__content'>
               <span className='banner_eyebrow'>
                 <i className='banner_eyebrow-dot' />
-                Medical billing &amp; revenue cycle management
+                Medical billing & revenue cycle management
               </span>
 
               <h1 className='banner__heading'>
@@ -173,7 +213,21 @@ const Banner = () => {
                   Book free billing audit
                 </a>
                 <a href='#howitworks' className='btn btn--link'>
-                  See how a claim moves <FaArrowRight className='arrow_icon' />
+                  See how a claim moves{" "}
+                  <span>
+                    <svg
+                      width='9'
+                      height='8'
+                      viewBox='0 0 9 8'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        d='M8.35355 4.03556C8.54882 3.8403 8.54882 3.52372 8.35355 3.32845L5.17157 0.146473C4.97631 -0.0487893 4.65973 -0.0487893 4.46447 0.146473C4.2692 0.341735 4.2692 0.658318 4.46447 0.85358L7.29289 3.68201L4.46447 6.51043C4.2692 6.7057 4.2692 7.02228 4.46447 7.21754C4.65973 7.4128 4.97631 7.4128 5.17157 7.21754L8.35355 4.03556ZM0 3.68201V4.18201H8V3.68201V3.18201H0V3.68201Z'
+                        fill='currentColor'
+                      />
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>

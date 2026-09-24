@@ -74,10 +74,13 @@
   color: #ffffff;
   transform: translateY(-2px);
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   .contact {
-    padding: 60px 0 60px;
+    padding: 50px 0 65px;
   }
+}
+@media (max-width: 768px) {
   .contact .contact_inner {
     gap: 10px;
   }

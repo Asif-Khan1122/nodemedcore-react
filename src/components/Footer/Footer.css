@@ -111,6 +111,12 @@
   gap: 1rem;
 }
 
+@media (max-width: 900px) {
+  .footer {
+    padding: 50px 0 40px;
+  }
+}
+
 @media (min-width: 640px) {
   .footer_bottom {
     flex-direction: row;
@@ -131,9 +137,6 @@
 }
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 60px 0 35px;
-  }
   .footer_bottom {
     padding-top: 1rem;
     font-size: 10px;
@@ -147,9 +150,6 @@
 }
 
 @media (max-width: 425px) {
-  .footer {
-    padding: 56px 0 28px;
-  }
   .footer_bottom {
     flex-direction: column;
     gap: 0;

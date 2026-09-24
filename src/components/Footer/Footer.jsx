@@ -25,7 +25,7 @@ export default function Footer() {
         <div className='footer_grid'>
           <div className='footer_brand'>
             <div className='footer_logo_wrap'>
-              <img src='./logo.png' alt='Nodemedcore Logo' />
+              <img src='./logo.svg' alt='Nodemedcore Logo' />
             </div>
             <p className='footer_description'>
               Medical billing and revenue cycle management for independent

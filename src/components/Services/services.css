@@ -31,18 +31,19 @@
   font-size: clamp(14px, 3vw, 16px);
   line-height: 1.5;
   width: fit-content;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .services .services_title {
-  color: #12283a;
-  font-size: clamp(38px, 4vw, 50px);
+  color: #0b3a62;
+  font-size: clamp(32px, 4vw, 50px);
   font-weight: 600;
   line-height: 1.1;
   font-family: "Space Grotesk", sans-serif;
 }
 
 .services .services_description {
-  color: #6b7c85;
+  color: #375e7f;
   font-size: clamp(15px, 3vw, 20px);
   line-height: 1.55;
   font-weight: 400;
@@ -115,7 +116,7 @@
 }
 
 .services .card_description {
-  color: #6b7c85;
+  color: #375e7f;
   font-size: clamp(16px, 3vw, 20px);
   line-height: 1.5;
   margin: 0;
@@ -138,11 +139,12 @@
     gap: 18px;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .services {
     padding: 50px 0;
   }
+}
+@media (max-width: 768px) {
   .services .services_inner {
     gap: 30px;
   }

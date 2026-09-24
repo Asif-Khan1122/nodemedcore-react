@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./services.css";
 
 const servicesData = [
@@ -41,8 +40,6 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <section className='services' id='services'>
       <div className='container'>
@@ -60,13 +57,7 @@ const Services = () => {
 
           <div className='services_grid'>
             {servicesData.map((service, index) => (
-              <div
-                key={index}
-                className={`services_card ${
-                  activeIndex === index ? "active" : ""
-                }`}
-                onClick={() => setActiveIndex(index)}
-              >
+              <div key={index} className={`services_card`}>
                 <div className='card_number'>{service.number}</div>
                 <h3 className='card_title'>{service.title}</h3>
                 <p className='card_description'>{service.description}</p>

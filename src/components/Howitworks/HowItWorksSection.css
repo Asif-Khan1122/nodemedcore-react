@@ -34,15 +34,15 @@
 }
 
 .howitworks .howitworks_title {
-  color: #12283a;
-  font-size: clamp(38px, 4vw, 50px);
+  color: #0b3a62;
+  font-size: clamp(32px, 4vw, 50px);
   font-weight: 600;
   line-height: 1.1;
   font-family: "Space Grotesk", sans-serif;
 }
 
 .howitworks .howitworks_description {
-  color: #6b7c85;
+  color: #375e7f;
   font-size: 20px;
   line-height: 1.55;
   font-weight: 400;
@@ -125,7 +125,7 @@
 }
 
 .howitworks .step_description {
-  color: #0b3a62cf;
+  color: #375e7f;
   font-size: clamp(14px, 2vw, 18px);
   line-height: 1.55;
   font-family: "IBM Plex Sans", sans-serif;
@@ -152,7 +152,7 @@
 
 @media (max-width: 900px) {
   .howitworks {
-    padding: 45px 0 100px;
+    padding: 50px 0 50px;
   }
 
   .howitworks .howitworks_inner {
@@ -174,7 +174,7 @@
 
 @media (max-width: 600px) {
   .howitworks {
-    padding: 40px 0 60px;
+    padding: 40px 0 40px;
   }
 
   .howitworks .timeline_row {
@@ -184,10 +184,6 @@
 
   .howitworks .timeline_item {
     min-width: 200px;
-  }
-
-  .howitworks .howitworks_title {
-    font-size: 28px;
   }
 
   .howitworks .howitworks_description {
