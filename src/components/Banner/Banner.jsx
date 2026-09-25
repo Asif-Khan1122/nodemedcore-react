@@ -8,7 +8,7 @@ const initialRows = [
     mid: "Scrub",
     end: "Payer",
     status: "paid",
-    speed: 0.02,
+    speed: 0.04,
     progress: 0,
   },
   {
@@ -16,7 +16,7 @@ const initialRows = [
     mid: "Submit",
     end: "Remit",
     status: "review",
-    speed: 0.015,
+    speed: 0.03,
     progress: 35,
   },
   {
@@ -24,7 +24,7 @@ const initialRows = [
     mid: "Appeal",
     end: "Payer",
     status: "denied",
-    speed: 0.01,
+    speed: 0.02,
     progress: 70,
   },
 ];
