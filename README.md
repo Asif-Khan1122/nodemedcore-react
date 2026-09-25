@@ -1,296 +1,64 @@
-# 🏥 NodeMedCore
+# NodeMedCore
 
-### Medical Billing & Revenue Cycle Management
+<div align="left">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+</div>
 
-A modern, responsive frontend interface for **NodeMedCore**, designed to simplify medical billing, claims tracking, and revenue cycle management for independent medical practices.
+<br />
 
-> **Every claim follows a path. We keep it moving to paid.**
+NodeMedCore is a frontend web application built to streamline medical billing and revenue cycle management for independent healthcare practices. I developed this interface to provide a clean, user-friendly way to track claims, manage daily billing operations, and monitor practice revenue.
 
----
-
-## ✨ Overview
-
-NodeMedCore provides a clean and intuitive interface for managing the medical billing lifecycle.
-
-The platform is designed to help practices:
-
-- 📋 Manage and track medical claims
-- 🔍 Identify claim issues before submission
-- 📊 Monitor claim status and performance
-- 💰 Track revenue and outstanding payments
-- 📈 Analyze billing and collection data
-- 🏥 Manage practice operations efficiently
+**Live Demo:** [www.nodemedcore.com](https://www.nodemedcore.com)
 
 ---
 
-## 🚀 Features
+## Features
 
-### 📊 Claim Tracking
+Instead of complex spreadsheets, this project provides an intuitive UI for handling billing workflows:
 
-Monitor claims throughout their lifecycle, from submission to payment.
-
-### 🔍 Claim Management
-
-Identify potential claim issues and keep billing workflows organized.
-
-### 📈 Revenue Analytics
-
-View important billing and revenue information through clear and easy-to-understand interfaces.
-
-### 💰 Payment Tracking
-
-Keep track of payments, outstanding balances, and collection progress.
-
-### 📱 Responsive Design
-
-Designed to provide a consistent experience across:
-
-- 💻 Desktop
-- 📱 Mobile
-- 📲 Tablet
-
-### 🎨 Modern UI
-
-Clean, professional interface focused on usability, readability, and efficient navigation.
+- **Claim Tracking:** Visual interfaces to monitor claims from submission to payment.
+- **Revenue Analytics:** Easy-to-read dashboards for tracking outstanding balances and collections.
+- **Error Identification:** Workflows designed to help spot claim issues before final submission.
+- **Responsive Layouts:** The UI adapts smoothly across desktop, tablet, and mobile devices.
 
 ---
 
-## 🛠️ Tech Stack
+## Built With
 
-| Technology      | Purpose                      |
-| --------------- | ---------------------------- |
-| ⚛️ React        | Frontend UI                  |
-| ⚡ Vite         | Development & build tooling  |
-| 🎨 CSS          | Styling & responsive layouts |
-| 🧭 React Router | Client-side navigation       |
-| 📡 Axios        | API communication            |
-| 🧹 ESLint       | Code quality                 |
+I chose a modern React stack to keep the application fast and maintainable:
 
-> **Note:** Versions may vary depending on the current `package.json`.
+- **React (v18)** - Core UI framework
+- **Vite** - Frontend tooling and bundler
+- **Custom CSS** - Using Grid and Flexbox for responsive layouts without heavy UI libraries
+- **React Router** - For client-side routing
+- **Axios** - API communication handling
 
 ---
 
-## 📁 Project Structure
+## Project Structure
+
+The codebase is organized by feature and reusable components:
 
 ```text
 nodemedcore-react/
-│
 ├── public/
 │   └── assets/
-│
 ├── src/
 │   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Banner.jsx
-│   │   ├── Stats.jsx
-│   │   ├── Whyus.jsx
-│   │   ├── Services.jsx
-│   │   ├── Howitworks.jsx
-|   |   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   │
+│   │   ├── Banner/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── Howitworks/
+│   │   ├── Services/
+│   │   ├── StatsSection/
+│   │   └── Whyus/
 │   ├── pages/
-│   │
 │   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
+│   ├── index.css
+│   └── main.jsx
 ├── package.json
-├── vite.config.js
-└── README.md
+└── vite.config.js
 ```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) 18+
-- npm, yarn, or pnpm
-- Git
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/nodemedcore-react.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd nodemedcore-react
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-The application will be available at:
-
-```text
-http://localhost:5173
-```
-
----
-
-## 📜 Available Scripts
-
-### Development
-
-```bash
-npm run dev
-```
-
-Starts the Vite development server.
-
-### Production Build
-
-```bash
-npm run build
-```
-
-Creates an optimized production build.
-
-### Preview
-
-```bash
-npm run preview
-```
-
-Runs the production build locally for testing.
-
-### Lint
-
-```bash
-npm run lint
-```
-
-Checks the project for ESLint issues.
-
----
-
-## 📸 Screenshots
-
-### Desktop
-
-Add your actual project screenshot here:
-
-```md
-![NodeMedCore Desktop](./screenshots/desktop.png)
-```
-
-### Mobile
-
-```md
-![NodeMedCore Mobile](./screenshots/mobile.png)
-```
-
-### Dashboard
-
-```md
-![NodeMedCore Dashboard](./screenshots/dashboard.png)
-```
-
-> 💡 **Tip:** Real screenshots make a huge difference when using this repository as a portfolio project.
-
----
-
-## 🎯 Project Goals
-
-NodeMedCore was built with a focus on:
-
-- Clean and maintainable React components
-- Responsive layouts
-- Reusable UI components
-- Modern frontend development practices
-- Accessible and intuitive user interfaces
-- Performance-focused development
-
----
-
-## 📱 Responsive Design
-
-The interface is optimized for different screen sizes:
-
-```text
-Desktop     →  🖥️
-Laptop      →  💻
-Tablet      →  📱
-Mobile      →  📲
-```
-
----
-
-## 🔮 Future Improvements
-
-Potential future improvements include:
-
-- 🔐 Authentication & authorization
-- 🗄️ Backend API integration
-- 📊 Advanced analytics dashboards
-- 🔔 Real-time notifications
-- 🧾 Detailed claim management
-- 👥 User and role management
-- 🌐 Production API integration
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-### Steps
-
-```bash
-# Fork the repository
-
-# Create a feature branch
-git checkout -b feature/your-feature
-
-# Make your changes
-
-# Commit your changes
-git commit -m "Add your feature"
-
-# Push your branch
-git push origin feature/your-feature
-```
-
-Then open a Pull Request.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more information.
-
----
-
-## 👨‍💻 Author
-
-**Asif Khan**
-
-Frontend Developer focused on building modern, responsive web applications with React, JavaScript, and modern frontend technologies.
-
----
-
-## ⭐ Support
-
-If you found this project useful or interesting, consider giving the repository a ⭐ on GitHub.
-
----
-
-### Built with ❤️ using React + Vite
