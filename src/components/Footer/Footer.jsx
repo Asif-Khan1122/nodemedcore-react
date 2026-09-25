@@ -38,7 +38,7 @@ export default function Footer() {
               <h3 className='footer_heading'>Services</h3>
               <ul className='footer_list'>
                 {footerData.services.map((item, index) => (
-                  <li key={index}>
+                  <li key={index.label}>
                     <a href={item.href} className='footer_link'>
                       {item.label}
                     </a>

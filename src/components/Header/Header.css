@@ -80,13 +80,14 @@
   transform: translateY(-8.5px) rotate(-45deg);
 }
 
-.menu-toggle {
-  display: none;
-}
-
 .mobile-nav {
   display: none;
 }
+
+.mobile-consult {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   .header {
     padding: 24px 0 18px;
@@ -196,12 +197,6 @@
   .header .mobile-nav.active a:hover {
     opacity: 0.7;
   }
-}
-.mobile-consult {
-  display: none;
-}
-
-@media (max-width: 768px) {
   .header .mobile-nav.active .mobile-consult {
     display: block;
     width: 100%;
@@ -218,19 +213,13 @@
     line-height: 1.295;
     margin-top: 5%;
   }
-
-  .header .mobile-nav.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header .mobile-nav.active ul {
-    width: 100%;
-  }
 }
 
 @media (max-width: 426px) {
   .header {
     padding: 14px 0;
+  }
+  .header .mobile-nav.active {
+    top: var(--header-height, 73px);
   }
 }

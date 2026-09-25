@@ -28,14 +28,6 @@
   font-family: var(--font-mono);
 }
 
-.howitworks .howitworks_title {
-  color: var(--heading-blue);
-  font-size: clamp(32px, 4vw, 50px);
-  font-weight: 600;
-  line-height: 1.1;
-  font-family: var(--);
-}
-
 .howitworks .howitworks_description {
   color: #375e7f;
   font-size: clamp(15px, 3vw, 20px);
@@ -97,7 +89,7 @@
   flex-shrink: 0;
 }
 
-.dashed-line {
+.howitworks .dashed_line {
   width: 100%;
   height: 1px;
   background-image: repeating-linear-gradient(

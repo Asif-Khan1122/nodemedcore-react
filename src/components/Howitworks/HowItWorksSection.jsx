@@ -40,7 +40,7 @@ function ProcessTimeline({ steps }) {
         <div className='timeline_item' key={index}>
           <div className='marker_row'>
             <span className='circle_dot' />
-            <div class='dashed-line'></div>{" "}
+            <div className='dashed_line'></div>{" "}
           </div>
           <p className='stage_label'>{step.stage}</p>
           <h3 className='step_title'>{step.title}</h3>

@@ -66,10 +66,9 @@
   }
   .stats_section .stat_item {
     max-width: 100%;
-  }
-  .stats_section .stat_item {
     gap: calc(8px + 1px);
   }
+
   .stats_section .stat_item h3 {
     font-weight: 500;
   }

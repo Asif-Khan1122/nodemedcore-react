@@ -167,7 +167,7 @@
   }
 
   .whyus .whyus_card {
-    padding: 100px 40px 100px 40px;
+    padding: 100px 40px;
     height: auto;
   }
 
@@ -206,7 +206,6 @@
   .whyus .whyus_badge {
     font-size: 13px;
     padding: 10px 14px;
-    max-width: 100% !important;
     white-space: normal;
     word-break: break-word;
   }
