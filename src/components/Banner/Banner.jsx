@@ -187,7 +187,7 @@ const Banner = () => {
       </Helmet>
 
       <section className='banner' id='banner'>
-        <div className='banner_container'>
+        <div className='container'>
           <div className='banner_inner'>
             <div className='banner__content'>
               <span className='banner_eyebrow'>
@@ -210,7 +210,7 @@ const Banner = () => {
               </p>
 
               <div className='banner__actions'>
-                <a href='#consult' className='btn btn--primary banner_btn'>
+                <a href='#contact' className='btn btn--primary btn--gradient'>
                   Book free billing audit
                 </a>
                 <a href='#howitworks' className='btn btn--link'>

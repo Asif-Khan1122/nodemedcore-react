@@ -36,7 +36,9 @@ const Whyus = () => {
       <div className='container'>
         <div className='whyus_inner'>
           <div className='whyus_header'>
-            <p className='whyus_tag'>why nodemedcore</p>
+            <p className='section_label' style={{ color: "#0ddabb" }}>
+              why nodemedcore
+            </p>
             <h2 className='whyus_title'>
               Built to be accountable to one practice at a time
             </h2>

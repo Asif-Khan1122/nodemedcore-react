@@ -4,12 +4,6 @@
   padding: 143px 0 55px;
 }
 
-.footer .container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .footer_grid {
   display: flex;
   flex-direction: column;
@@ -57,7 +51,7 @@
 .footer_description {
   font-size: 15px;
   color: #0b3a62cf;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
   line-height: 1.4;
   max-width: 300px;
 }
@@ -71,12 +65,12 @@
 .footer_heading {
   font-size: 15px;
   font-weight: 500;
-  color: #0b3a62;
+  color: var(--heading-blue);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.4rem;
   margin-top: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
 }
 
 .footer_list {
@@ -93,7 +87,7 @@
   color: #0b3a62cf;
   text-decoration: none;
   font-size: 15px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
 }
 
 .footer_link:hover {

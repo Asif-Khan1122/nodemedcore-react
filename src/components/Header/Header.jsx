@@ -56,7 +56,7 @@ const Header = () => {
             </nav>
           </div>
 
-          <a href='#contact' className='btn_consult'>
+          <a href='#contact' className='btn_consult btn btn--gradient'>
             Book a Consult
           </a>
         </div>

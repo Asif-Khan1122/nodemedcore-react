@@ -1,12 +1,6 @@
 .howitworks {
-  background-color: #f5f7f9;
+  background-color: var(--section-bg);
   padding: 50px 0 155px;
-}
-
-.howitworks .container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .howitworks .howitworks_inner {
@@ -31,15 +25,15 @@
   font-size: clamp(14px, 3vw, 16px);
   line-height: 1.5;
   width: fit-content;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-mono);
 }
 
 .howitworks .howitworks_title {
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-size: clamp(32px, 4vw, 50px);
   font-weight: 600;
   line-height: 1.1;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--);
 }
 
 .howitworks .howitworks_description {
@@ -47,7 +41,7 @@
   font-size: clamp(15px, 3vw, 20px);
   line-height: 1.55;
   font-weight: 400;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
   max-width: 740px;
 }
 
@@ -124,10 +118,10 @@
 }
 
 .howitworks .step_title {
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 600;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-text);
   margin: 3px 0;
 }
 
@@ -135,7 +129,7 @@
   color: #375e7f;
   font-size: clamp(14px, 2vw, 18px);
   line-height: 1.55;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
   max-width: 275px;
 }
 
@@ -191,10 +185,6 @@
 
   .howitworks .timeline_item {
     min-width: 200px;
-  }
-
-  .howitworks .howitworks_description {
-    font-size: 16px;
   }
 
   .howitworks .dashed_line {

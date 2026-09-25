@@ -1,5 +1,5 @@
 .header {
-  background-color: #f5f7f9;
+  background-color: var(--section-bg);
   padding: 33px 0 25px;
   border-bottom: 1px solid #0b3a6252;
   position: sticky;
@@ -7,11 +7,6 @@
   top: 0;
 }
 
-.header .container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 .header .header_inner {
   display: flex;
   align-items: center;
@@ -47,38 +42,6 @@
   white-space: nowrap;
 }
 
-.header .btn_consult {
-  flex-shrink: 0;
-  white-space: nowrap;
-  padding: 16px 27px 15px;
-  text-decoration: none;
-  border-radius: 3px;
-  color: white;
-  cursor: pointer;
-  font:
-    600 17px "IBM Plex Sans",
-    sans-serif;
-  line-height: 1.295;
-  background-image: linear-gradient(
-    to right,
-    #098e7a 0%,
-    #098e7a 50%,
-    #0b3a62 50%,
-    #0b3a62 100%
-  );
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition:
-    background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
-}
-
-.header .btn_consult:hover {
-  background-position: left bottom;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
 .header .menu-toggle {
   display: none;
   border: none;
@@ -196,7 +159,7 @@
     width: 100%;
     height: calc(100vh - var(--header-height, 81px));
     z-index: 99;
-    background: #f5f7f9;
+    background: var(--section-bg);
     padding: 30px 20px;
     gap: 30px;
   }
@@ -221,7 +184,7 @@
 
   .header .mobile-nav.active a {
     text-decoration: none;
-    color: #0b3a62;
+    color: var(--heading-blue);
     font:
       500 18px "IBM Plex Sans",
       sans-serif;
@@ -247,7 +210,7 @@
     padding: 16px 27px 15px;
     text-decoration: none;
     border-radius: 3px;
-    background: #0b3a62;
+    background: var(--heading-blue);
     color: white;
     font:
       600 17px "IBM Plex Sans",

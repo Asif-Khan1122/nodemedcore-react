@@ -3,12 +3,6 @@
   padding: 115px 0 59px;
 }
 
-.services .container {
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .services .services_inner {
   display: flex;
   flex-direction: column;
@@ -24,30 +18,12 @@
   max-width: 830px;
 }
 
-.services .services_tag {
-  color: #098e7a;
-  font-weight: 400;
-  letter-spacing: 4%;
-  font-size: clamp(14px, 3vw, 16px);
-  line-height: 1.5;
-  width: fit-content;
-  font-family: "IBM Plex Mono", sans-serif;
-}
-
-.services .services_title {
-  color: #0b3a62;
-  font-size: clamp(32px, 4vw, 50px);
-  font-weight: 600;
-  line-height: 1.1;
-  font-family: "Space Grotesk", sans-serif;
-}
-
 .services .services_description {
   color: #375e7f;
   font-size: clamp(15px, 3vw, 20px);
   line-height: 1.55;
   font-weight: 400;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
   max-width: 740px;
 }
 
@@ -102,25 +78,25 @@
   color: #098e7a;
   font-size: clamp(10px, 2vw, 14px);
   font-weight: 400;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: var(--font-mono);
   line-height: 1.5;
 }
 
 .services .card_title {
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-size: clamp(20px, 3vw, 26px);
   font-weight: 600;
   margin-bottom: 6px;
   line-height: 1.1156;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
 }
 
 .services .card_description {
-  color: #375e7f;
+  color: #395f80;
   font-size: clamp(16px, 3vw, 20px);
   line-height: 1.5;
   margin: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
 }
 
 @media (max-width: 1200px) {

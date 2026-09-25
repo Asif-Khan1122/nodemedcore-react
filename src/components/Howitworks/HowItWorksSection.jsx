@@ -58,7 +58,7 @@ function HowItWorksSection() {
         <div className='howitworks_inner'>
           <div className='howitworks_header'>
             <p className='howitworks_tag'>HOW IT WORKS</p>
-            <h2 className='howitworks_title'>
+            <h2 className='main_heading'>
               What happens between a visit and a payment
             </h2>
             <p className='howitworks_description'>

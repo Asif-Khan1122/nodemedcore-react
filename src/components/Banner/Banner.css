@@ -1,20 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap");
-
 .banner {
-  background: rgb(245 247 249);
+  background: var(--section-bg);
   padding: 168px 0 130px 0;
-  display: flex;
-  align-items: center;
-  font-family: "IBM Plex Sans", sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-.banner_container {
-  width: 100%;
-  max-width: 1620px;
-  margin: 0 auto;
-  padding: 0 20px;
+.banner .container {
   position: relative;
   z-index: 1;
 }
@@ -40,7 +31,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   padding: 11px 21px;
   border-radius: 999px;
   background: rgb(217 234 234);
@@ -92,10 +83,10 @@
 
 .banner__heading {
   font-size: clamp(36px, 4vw, 76px);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-main);
   line-height: 1.08 !important;
   font-weight: 600;
-  color: rgb(11 58 98);
+  color: var(--heading-blue);
   margin: 2px 0 7px 3px;
   letter-spacing: -0.02em;
 }
@@ -109,10 +100,10 @@
 }
 
 .banner_desc {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 19px;
+  font-family: var(--font-text);
+  font-size: clamp(16px, 3vw, 20px);
   line-height: 1.6;
-  color: rgb(11 58 98);
+  color: #4a6d8b;
   margin: 4px 0 6px;
   font-weight: 400;
   max-width: 48ch;
@@ -126,56 +117,8 @@
   margin-top: 8px;
 }
 
-.btn {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-}
-
-.btn--primary {
-  background: #0b3a62;
-  color: #ffffff;
-  padding: 16px 34px;
-  border-radius: 3px;
-  box-shadow: 0 4px 16px rgba(11, 37, 69, 0.18);
-  letter-spacing: 0.01em;
-}
-
-.banner a.banner_btn,
-.banner_btn {
-  color: #ffffff;
-  background-image: linear-gradient(
-    to right,
-    #098e7a 0%,
-    #098e7a 50%,
-    #0b3a62 50%,
-    #0b3a62 100%
-  );
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition:
-    background-position 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
-}
-
-.banner a.banner_btn:hover,
-.banner_btn:hover {
-  background-position: left bottom;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
 .btn--link {
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-weight: 500;
   position: relative;
   padding-bottom: 10px;
@@ -188,7 +131,7 @@
   left: -8px;
   width: calc(100% + 16px);
   height: 1px;
-  background-color: #0b3a62;
+  background-color: var(--heading-blue);
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -211,7 +154,7 @@
 }
 
 .tracker-card {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   background: #ffffff;
   border-radius: 17px;
   border: 1px solid rgb(184 198 209);
@@ -239,7 +182,7 @@ svg.arrow_icon {
 .tracker-card__title {
   letter-spacing: 3%;
   font-size: clamp(10px, 3vw, 15px);
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.334;
@@ -300,10 +243,10 @@ svg.arrow_icon {
   font-size: 11px;
   letter-spacing: 0.03em;
   margin-bottom: 8px;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-text);
   font-weight: 400;
   text-transform: uppercase;
-  accent-color: #0b3a62;
+  accent-color: var(--heading-blue);
   line-height: 1.273;
 }
 
@@ -320,7 +263,7 @@ svg.arrow_icon {
   left: 0;
   right: 0;
   height: 1px;
-  background: #0b3a623b;
+  background: #c7d2db;
   transform: translateY(-50%);
   border-radius: 4px;
 }
@@ -332,7 +275,7 @@ svg.arrow_icon {
   height: 8px;
   border-radius: 50%;
   background: #d9d9d9;
-  border: 1.4px solid #0b3a62;
+  border: 1px solid var(--heading-blue);
   transform: translate(-50%, -50%);
   z-index: 1;
   transition: all 0.3s ease;
@@ -347,8 +290,8 @@ svg.arrow_icon {
 .tracker-row__node {
   position: absolute;
   top: 50%;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition:
@@ -382,7 +325,7 @@ svg.arrow_icon {
   align-items: center;
   gap: 22px;
   font-size: 11px;
-  color: #0b3a62;
+  color: var(--heading-blue);
   font-weight: 400;
   font-family: "IBM Plex Sans";
 }
@@ -429,9 +372,6 @@ svg.arrow_icon {
 @media (max-width: 1200px) {
   .banner {
     padding: 100px 0 100px 0;
-  }
-  .banner_desc {
-    font-size: 17px;
   }
 
   .tracker-card {
@@ -505,9 +445,7 @@ svg.arrow_icon {
   .banner__heading br {
     display: none;
   }
-  .banner_desc {
-    font-size: 15px;
-  }
+
   .banner__content {
     gap: 18px;
   }

@@ -45,8 +45,8 @@ const Services = () => {
       <div className='container'>
         <div className='services_inner'>
           <div className='services_header'>
-            <span className='services_tag'>SERVICES</span>
-            <h2 className='services_title'>
+            <span className='section_label'>SERVICES</span>
+            <h2 className='main_heading'>
               Full revenue cycle, or just the part that’s stalling
             </h2>
             <p className='services_description'>
