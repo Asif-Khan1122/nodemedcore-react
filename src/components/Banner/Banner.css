@@ -449,7 +449,10 @@ svg.arrow_icon {
   .banner__content {
     gap: 18px;
   }
-
+  .banner_eyebrow-dot {
+    width: 6px;
+    height: 6px;
+  }
   .banner_eyebrow {
     font-size: 8px;
     padding: 6px 9px;
